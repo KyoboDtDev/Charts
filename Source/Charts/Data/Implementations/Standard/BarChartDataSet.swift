@@ -15,6 +15,14 @@ import CoreGraphics
 
 open class BarChartDataSet: BarLineScatterCandleBubbleChartDataSet, BarChartDataSetProtocol
 {
+    public var drawBarGradientEnabled: Bool = false
+    
+    public var gradientPositions: [CGFloat]?
+    
+    public var gradientStart: CGPoint = CGPoint()
+    
+    public var gradientEnd: CGPoint = CGPoint()
+    
     private func initialize()
     {
         self.highlightColor = NSUIColor.black

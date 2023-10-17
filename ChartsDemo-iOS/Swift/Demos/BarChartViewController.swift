@@ -127,6 +127,8 @@ class BarChartViewController: DemoBaseViewController {
         if let set = chartView.data?.first as? BarChartDataSet {
             set1 = set
             set1.replaceEntries(yVals)
+            set1.barCornerRadiusFactor = 15
+            
             chartView.data?.notifyDataChanged()
             chartView.notifyDataSetChanged()
         } else {
